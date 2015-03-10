@@ -1,0 +1,19 @@
+{
+  "name": "noBoundaries",
+  "version": "1.0.0",
+  "description": "No Boundaries Yoga Therapy",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Kawal Singh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "express": "^4.12.2",
+    "lodash": "^3.5.0",
+    "method-override": "^2.3.1",
+    "mongoose": "^3.8.24",
+    "node-restful": "^0.1.18"
+  }
+}
