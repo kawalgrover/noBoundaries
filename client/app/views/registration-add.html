@@ -1,0 +1,18 @@
+<form role="form">
+  <div class="form-group">
+    <label for="therapySession">Therapy Session</label>
+    <input type="text" class="form-control" id="therapySession" placeholder="Therapy" ng-model="registration.therapy">
+  </div>
+  <div class="form-group">
+    <label for="appointmentTime">Appointment Time:</label>
+    <input type="text" class="form-control" id="appointmentTime" placeholder="Appointment Time" ng-model="registration.appointment">
+  </div>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary" ng-click="saveRegistration()">Submit</button>
+</form>
+

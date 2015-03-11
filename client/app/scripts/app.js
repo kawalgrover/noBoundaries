@@ -30,6 +30,22 @@ angular
         templateUrl: 'views/register.html',
         controller: 'RegisterCtrl'
       })
+      .when('create/register', {
+        templateUrl: 'views/registration-add.html',
+        controller: 'RegistrationAddCtrl'
+      })
+      .when('/register/:id', {
+        templateUrl: 'views/registration-view.html',
+        controller: 'RegistrationViewCtrl'
+      })
+      .when('/register/:id/delete', {
+        templateUrl: 'views/registration-delete.html',
+        controller: 'RegistrationDeleteCtrl'
+      })
+      .when('/register/:id/edit', {
+        templateUrl: 'views/registration-edit.html',
+        controller: 'RegistrationEditCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
