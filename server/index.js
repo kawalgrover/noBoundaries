@@ -7,6 +7,10 @@ var _ = require('lodash');
 //create the application
 var app = express();
 
+//logging on server side
+var morgan = require('morgan');
+app.use(morgan('combined'));
+
 //add middleware necessary for REST API's
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());

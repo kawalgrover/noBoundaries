@@ -1,3 +1,3 @@
 module.exports = {
-    registration: require('./register.js')
+    register: require('./register.js')
 }

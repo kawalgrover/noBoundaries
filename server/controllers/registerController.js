@@ -8,6 +8,7 @@ module.exports = function(app, route){
          app.models.register
          ).methods(['get', 'put', 'post', 'delete']);
 
+    //register this endpoint with the application.
     rest.register(app, route);
 
     return function(req, res, next) {

@@ -1,0 +1,30 @@
+<form>
+  <div class="form-group">
+    <label for="therapySession">Therapy Session</label>
+    <input type="text" class="form-control" id="therapySession" placeholder="Therapy">
+  </div>
+  <div class="form-group">
+    <label for="appointmentTime">Appointment Time:</label>
+    <input type="text" class="form-control" id="appointmentTime" placeholder="Appointment Time">
+  </div>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<table class="table table-striped">
+<thead>
+    <th>Session</th>
+    <th>Time</th>
+</thead>
+<tbody>
+    <tr ng-repeat="registration in registrations">
+        <td>{{ registration.therapy }} </td>
+        <td>{{ registration.appointment }} </td>
+    </tr>
+</tbody>
+</table>
