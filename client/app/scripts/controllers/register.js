@@ -9,7 +9,5 @@
  */
 angular.module('noBoundariesApp')
   .controller('RegisterCtrl', function ($scope, Register) {
-    console.log('RegisterCtrl init');
-    $scope.registrations = Register.getList().$objects;
-
+    $scope.registrations = Register.getList().$object;
   });

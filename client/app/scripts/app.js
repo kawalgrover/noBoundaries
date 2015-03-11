@@ -42,7 +42,6 @@ angular
     });
   })
   .factory('Register', function(RegisterRestangular) {
-    console.log('Register called!');
     return RegisterRestangular.service('register');
 
   });
