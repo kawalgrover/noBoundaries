@@ -46,6 +46,26 @@ angular
         templateUrl: 'views/registration-edit.html',
         controller: 'RegistrationEditCtrl'
       })
+      .when('/events', {
+        templateUrl: 'views/events.html',
+        controller: 'EventsCtrl'
+      })
+      .when('/create/events', {
+        templateUrl: 'views/events-add.html',
+        controller: 'EventsAddCtrl'
+      })
+      .when('/events/:id', {
+        templateUrl: 'views/event-view.html',
+        controller: 'EventViewCtrl'
+      })
+      .when('/events/:id/delete', {
+        templateUrl: 'views/event-delete.html',
+        controller: 'EventDeleteCtrl'
+      })
+      .when('/events/:id/edit', {
+        templateUrl: 'views/event-edit.html',
+        controller: 'EventEditCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -60,4 +80,7 @@ angular
   .factory('Register', function(RegisterRestangular) {
     return RegisterRestangular.service('register');
 
+  })
+  .factory('Events', function(RegisterRestangular){
+    return RegisterRestangular.service('events');
   });

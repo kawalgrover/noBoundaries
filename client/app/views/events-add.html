@@ -1,0 +1,51 @@
+<form role="form">
+  <div class="form-group">
+    <label for="eventTitle">Title</label>
+    <input type="text" class="form-control" id="eventTitle" placeholder="Title" ng-model="event.title">
+  </div>
+  <div class="form-group">
+    <label for="subTitle">Sub title</label>
+    <input type="text" class="form-control" id="subTitle" placeholder="Subtitle" ng-model="event.subTitle">
+  </div>
+  <div class="form-group">
+    <label for="subTitle">Description</label>
+    <textarea class="form-control" id="description" placeholder="Description" ng-model="event.description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="eventStart">Event Start</label>
+    <input type="date" class="form-control" id="eventStart" placeholder="From" ng-model="event.from"></input>
+  </div>
+  <div class="form-group">
+    <label for="eventEnd">Event Start</label>
+    <input type="date" class="form-control" id="eventEnd" placeholder="To" ng-model="event.to"></input>
+  </div>
+  <div class="form-group">
+    <label for="offeredBy">Offered By</label>
+    <input type="text" class="form-control" id="offeredBy" placeholder="Offered By" ng-model="event.offeredBy">
+  </div>
+  <div class="form-group">
+    <label for="address1">Address</label>
+    <input type="text" class="form-control" id="address1" placeholder="Address" ng-model="event.location.address1">
+  </div>
+  <div class="form-group">
+    <label for="address2">Address</label>
+    <input type="text" class="form-control" id="address2" placeholder="Address" ng-model="event.location.address2">
+  </div>
+  <div class="form-group">
+    <label for="city">City</label>
+    <input type="text" class="form-control" id="city" placeholder="City" ng-model="event.location.city">
+  </div>
+  <div class="form-group">
+    <label for="state">State</label>
+    <input type="text" class="form-control" id="state" placeholder="State" ng-model="event.location.state">
+  </div>
+  <div class="form-group">
+    <label for="zip">Zip</label>
+    <input type="text" class="form-control" id="zip" placeholder="Zip" ng-model="event.location.zip">
+  </div>
+
+
+  <button type="submit" class="btn btn-primary" ng-click="saveEvent()">Submit</button>
+</form>
+
+
