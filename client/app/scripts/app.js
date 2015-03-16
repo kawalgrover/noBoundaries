@@ -66,6 +66,10 @@ angular
         templateUrl: 'views/event-edit.html',
         controller: 'EventEditCtrl'
       })
+      .when('//events/:id/delete', {
+        templateUrl: 'views/events-delete.html',
+        controller: 'EventsDeleteCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
