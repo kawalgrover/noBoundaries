@@ -9,6 +9,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -22,8 +23,8 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
+      <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container-fluid">
           <div class="navbar-header">
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
@@ -33,16 +34,16 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">No Boundaries</a>
+            <a class="navbar-brand" href="#/">
+              <i class="fa fa-heart fa-2x" ng-show="!loggedIn"> No Boundaries</i>
+              <i class="fa fa-home fa-2x" ng-show="loggedIn"> Home</i></a>
+            </a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/register">Register</a></li>
-              <li><a ng-href="#/events">Events</a></li>
-
+            <ul class="nav navbar-nav navbar-right">
+              <li><a ng-href="#/register"><i class="fa fa-user fa-2x"> Login</i></a></li>
+              <li><a ng-href="#/register"><i class="fa fa-user-plus fa-2x"> Register</i></a></li>
             </ul>
           </div>
         </div>
@@ -50,11 +51,11 @@
     </div>
 
     <div class="container">
-    <div ng-view=""></div>
+      <div ng-view=""></div>
     </div>
 
     <div class="footer">
-      <div class="container">
+      <div class="container-fluid">
         <p><span class="glyphicon glyphicon-heart"></span> made with love.</p>
       </div>
     </div>
@@ -98,5 +99,5 @@
         <script src="scripts/controllers/event-delete.js"></script>
         <script src="scripts/controllers/event-edit.js"></script>
         <!-- endbuild -->
-</body>
+  </body>
 </html>
