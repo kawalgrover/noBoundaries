@@ -115,9 +115,19 @@
 	},
 	"expanded_folders":
 	[
+		"/home/kgrover/workspace/noBoundaries",
+		"/home/kgrover/workspace/noBoundaries/client",
+		"/home/kgrover/workspace/noBoundaries/client/app",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers",
+		"/home/kgrover/workspace/noBoundaries/client/app/views",
+		"/home/kgrover/workspace/noBoundaries/server/node_modules"
 	],
 	"file_history":
 	[
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/app.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/index.html",
+		"/home/kgrover/workspace/noBoundaries/client/package.json",
+		"/home/kgrover/Downloads/alissa-coming-soon-v2-0/index.html",
 		"/home/kgrover/workspace/noBoundaries/blog/node_modules/hexo/bin/hexo",
 		"/home/kgrover/workspace/noBoundaries/blog/package.json",
 		"/home/kgrover/workspace/noBoundaries/server/routes.js",
@@ -147,11 +157,9 @@
 		"/home/kgrover/workspace/noBoundaries/client/app/views/registration-delete.html",
 		"/home/kgrover/workspace/noBoundaries/client/app/views/event-delete.html",
 		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/registration-edit.js",
-		"/home/kgrover/workspace/noBoundaries/client/app/index.html",
 		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/registration-add.js",
 		"/home/kgrover/workspace/noBoundaries/client/app/views/registration-add.html",
 		"/home/kgrover/workspace/noBoundaries/client/app/views/events-add.html",
-		"/home/kgrover/workspace/noBoundaries/client/app/scripts/app.js",
 		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/events.js",
 		"/home/kgrover/workspace/noBoundaries/client/app/views/events.html",
 		"/home/kgrover/workspace/noBoundaries/server/controllers/registerController.js",
@@ -159,7 +167,6 @@
 		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/register.js",
 		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/movie-add.js",
 		"/home/kgrover/workspace/noBoundaries/client/app/views/movie-add.html",
-		"/home/kgrover/workspace/noBoundaries/client/package.json",
 		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/about.js",
 		"/home/kgrover/workspace/noBoundaries/client/bower.json",
 		"/home/kgrover/workspace/noBoundaries/client/README.md",
@@ -244,8 +251,7 @@
 		"/home/kgrover/workspace/assemblycoins/readme.md",
 		"/home/kgrover/workspace/assemblycoins/assemblycoins/main.py",
 		"/home/kgrover/workspace/env/assembly/lib/python2.7/UserDict.py",
-		"/home/kgrover/workspace/assemblycoins/assemblycoins/bitsource.py",
-		"/home/kgrover/workspace/assemblycoins/assemblycoins/databases.py"
+		"/home/kgrover/workspace/assemblycoins/assemblycoins/bitsource.py"
 	],
 	"find":
 	{
