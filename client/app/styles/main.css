@@ -3,6 +3,7 @@ body {
   /* Margin bottom by footer height */
   padding: 0;
   margin-bottom: 60px;
+  background: url(/images/background.png) repeat;
 }
 
 .navbar {
@@ -66,4 +67,99 @@ body {
   .header {
     margin-bottom: 30px;
   }
+}
+
+.center-row{
+  height: 200px;
+}
+.photo {
+    background-color: rgba(128, 128, 128, 0.5);
+    border: 2px solid #444;
+    float: left;
+    height: 100px;
+    margin: 5px;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    z-index: 1;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    
+    -webkit-transform:scale(1.0);
+    -moz-transform:scale(1.0);
+    -ms-transform:scale(1.0);
+    -o-transform:scale(1.0);
+    transform:scale(1.0);
+
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.center-row-photo{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.photo img{
+    width: 100%;
+}
+.photo-center:hover{
+    z-index: 10;
+    -webkit-transform:scale(1.3);
+    -moz-transform:scale(1.3);
+    -ms-transform:scale(1.3);
+    -o-transform:scale(1.3);
+    transform:scale(1.3);
+}
+.photo-right:hover{
+    z-index: 10;
+    -webkit-transform:translate(-60px,0px)scale(1.3);
+    -moz-transform:translate(-60px,0px)scale(1.3);
+    -ms-transform:translate(-60px,0px)scale(1.3);
+    -o-transform:translate(-60px,0px)scale(1.3);
+    transform:translate(-60px,0px)scale(1.3);
+}
+.photo-left:hover{
+    z-index: 10;
+    -webkit-transform:translate(60px,0px)scale(1.3);
+    -moz-transform:translate(60px,0px)scale(1.3);
+    -ms-transform:translate(60px,0px)scale(1.3);
+    -o-transform:translate(60px,0px)scale(1.3);
+    transform:translate(60px,0px)scale(1.3);
+}
+.photo div {
+    background: url(/images/background.png) repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 15;
+
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.photo.pair div {
+    width: 50%;
+}
+.photo.pair div:nth-child(odd) {
+    margin-left: 148px;
+}
+.photo.pair:hover div {
+    width: 0%;
+}
+.photo.pair:hover div:nth-child(odd) {
+    margin-left: 296px;
 }
