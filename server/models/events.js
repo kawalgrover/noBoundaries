@@ -30,6 +30,9 @@ var eventSchema = new mongoose.Schema({
         city: {type: String, required: true},
         state: {type: String},
         zip: {type: String}
+    },
+    sessionType : {
+        type: String //TODO: This needs to be a lookup column.
     }
 
 });

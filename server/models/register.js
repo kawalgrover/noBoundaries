@@ -2,12 +2,14 @@ var mongoose = require('mongoose');
 
 //create the regisration schema
 var registrationSchema = new mongoose.Schema({
-    therapy: {
-        type: String,
+    user : {
+        type:  mongoose.Schema.Types.ObjectId,
+        ref: 'user',
         required: true
     },
-    appointment: {
-        type: Date,
+    registeredFor : {
+        type:  mongoose.Schema.Types.ObjectId,
+        ref: 'events',
         required: true
     }
 });
