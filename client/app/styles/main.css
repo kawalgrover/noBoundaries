@@ -8,6 +8,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: FontAwesome;
 }
 
 .navbar {
@@ -102,7 +103,12 @@ footer {
   width:370px;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 40px;
+  padding-left: 40px;
   padding: 15px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  opacity: 0.95;
 }
 
 .right-inner-addon {
@@ -118,7 +124,16 @@ footer {
     pointer-events: none;
 }
 
-
+#location{
+  cursor: pointer;
+}
+#map-content{
+  display: none;
+}
+.map{
+  width: 100%;
+  height: 250px;
+}
 .fa.pull-right {
     margin-left: 0.1em;   
 }
@@ -134,6 +149,14 @@ footer {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+.date{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.weekday{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .date-container {
     padding: 0px 40px;   
