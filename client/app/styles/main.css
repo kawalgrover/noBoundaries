@@ -113,6 +113,9 @@ footer {
 .contact-panel{
   width:450px;
 }
+.event-panel{
+  width:450px;
+}
 .text-contact{
   resize:vertical; 
   max-height:200px; 
