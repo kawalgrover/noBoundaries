@@ -110,6 +110,14 @@ footer {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   opacity: 0.95;
 }
+.contact-panel{
+  width:450px;
+}
+.text-contact{
+  resize:vertical; 
+  max-height:200px; 
+  min-height:100px;
+}
 
 .right-inner-addon {
     position: relative;
