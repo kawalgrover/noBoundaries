@@ -82,6 +82,26 @@ angular.module('noBoundariesApp')
 	        }
 	        
 	    });
+		var mainContent = $("#content-panel").html();
+		var mapContent = $("#map-content").html();
+		$("#location").click(function() {
+			$('#content-panel').fadeOut("slow", function(){
+			   $(this).replaceWith(mapContent);
+			   $('#content-panel').fadeIn("slow");
+			});
+			$(".home-panel").animate({
+			width: "450px"
+			}, 1500 );
+		});
+		$("#back").click(function() {
+			console.log('yeah')
+			$('#content-panel').fadeOut("slow", function(){
+			   $(this).replaceWith(mainContent);
+			   $('#content-panel').fadeIn("slow");
+			});
+			$(".home-panel").animate({
+			width: "370px"
+			}, 1500 );
+		});
 	});
-
   });
