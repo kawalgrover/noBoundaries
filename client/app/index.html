@@ -52,15 +52,24 @@
       
     <div ng-view="" class="main"></div>
 
-    <div class="footer">
-      <div class="container-fluid">
-        <p><span class="glyphicon glyphicon-heart"></span> made with love.</p>
+    <footer>
+      <div class="col-lg-4 col-md-4 text-left">
+        <div class="copyright">Copyright © NoBoundaries</div>
       </div>
-    </div>
+      <div class="col-lg-4 col-md-4 text-center">
+        <a href="" class="data-footer"><i class="fa fa-leanpub"></i> Blog</a>
+        <a href="" class="data-footer" title="Contact me!"><i class="fa fa-envelope"></i> Contact</a>
+        <a href="" class="data-footer" id="gh" target="_blank" title="Twitter"><i class="fa fa-twitter"></i> Twitter</a>
+        <a href="" class="data-footer" target="_blank" title="facebook"><i class="fa fa-facebook"></i> Facebook</a>
+      </div>
+      <div class="col-lg-4 col-md-4 text-right">
+        <a href="" class="data-footer location-footer"><i class="fa fa-map-marker"></i> 1755 Grassland Parkway Suite B, Alpharetta, GA 30004</a>
+      </div>
+    </footer>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
+    <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
