@@ -1,0 +1,394 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Register",
+				"RegisterRestangular"
+			],
+			[
+				"bower",
+				"bower_components"
+			],
+			[
+				"metho",
+				"methodOverride"
+			],
+			[
+				"bod",
+				"bodyParser"
+			],
+			[
+				"Auth",
+				"AuthHandler"
+			],
+			[
+				"expirati",
+				"expirationDate"
+			],
+			[
+				"iss",
+				"issueCoupon"
+			],
+			[
+				"expir",
+				"expirationDate"
+			],
+			[
+				"amount",
+				"amountIssued"
+			],
+			[
+				"i",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"check",
+				"checkLetterFrequency"
+			],
+			[
+				"copy",
+				"copyrightInfo	function"
+			],
+			[
+				"render",
+				"render_to_response	import"
+			],
+			[
+				"s",
+				"script"
+			],
+			[
+				"scr",
+				"scripts"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"inst	",
+				"Package Control: Install Package"
+			],
+			[
+				"intsa",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/kgrover/workspace/noBoundaries",
+		"/home/kgrover/workspace/noBoundaries/client",
+		"/home/kgrover/workspace/noBoundaries/client/app",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers",
+		"/home/kgrover/workspace/noBoundaries/client/app/views",
+		"/home/kgrover/workspace/noBoundaries/server/node_modules"
+	],
+	"file_history":
+	[
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/app.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/index.html",
+		"/home/kgrover/workspace/noBoundaries/client/package.json",
+		"/home/kgrover/Downloads/alissa-coming-soon-v2-0/index.html",
+		"/home/kgrover/workspace/noBoundaries/blog/node_modules/hexo/bin/hexo",
+		"/home/kgrover/workspace/noBoundaries/blog/package.json",
+		"/home/kgrover/workspace/noBoundaries/server/routes.js",
+		"/home/kgrover/workspace/noBoundaries/blog/db.json",
+		"/home/kgrover/workspace/noBoundaries/blog/node_modules/hexo-renderer-stylus/lib/renderer.js",
+		"/home/kgrover/workspace/noBoundaries/server/models/index.js",
+		"/home/kgrover/workspace/noBoundaries/server/index.js",
+		"/home/kgrover/workspace/noBoundaries/server/controllers/eventsController.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/event-delete.js",
+		"/home/kgrover/workspace/noBoundaries/client/test/spec/controllers/event-delete.js",
+		"/home/kgrover/workspace/noBoundaries/server/models/events.js",
+		"/home/kgrover/workspace/noBoundaries/server/models/register.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/event-edit.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/event-view.html",
+		"/home/kgrover/workspace/noBoundaries/client/test/spec/controllers/event-view.js",
+		"/home/kgrover/workspace/noBoundaries/client/Gruntfile.js",
+		"/home/kgrover/workspace/copay/config.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/events-add.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/event-edit.html",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/registration-edit.html",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/registration-nav.html",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/registration-view.html",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/events-nav.html",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/registration-view.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/event-view.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/registration-delete.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/registration-delete.html",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/event-delete.html",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/registration-edit.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/registration-add.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/registration-add.html",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/events-add.html",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/events.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/events.html",
+		"/home/kgrover/workspace/noBoundaries/server/controllers/registerController.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/register.html",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/register.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/movie-add.js",
+		"/home/kgrover/workspace/noBoundaries/client/app/views/movie-add.html",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/about.js",
+		"/home/kgrover/workspace/noBoundaries/client/bower.json",
+		"/home/kgrover/workspace/noBoundaries/client/README.md",
+		"/home/kgrover/workspace/noBoundaries/client/app/scripts/controllers/main.js",
+		"/home/kgrover/workspace/noBoundaries/todo.txt",
+		"/home/kgrover/workspace/noBoundaries/server/package.json",
+		"/home/kgrover/workspace/nby/GruntFile.js",
+		"/home/kgrover/workspace/nby/.travis.yml",
+		"/home/kgrover/workspace/nby/source/app.js",
+		"/home/kgrover/workspace/nby/bower.json",
+		"/home/kgrover/workspace/nby/register/RegisterControllerSpec.js",
+		"/home/kgrover/workspace/nby/dist/nby-0.0.1.js",
+		"/home/kgrover/workspace/nby/karma.conf.js",
+		"/home/kgrover/workspace/nby/source/services.js",
+		"/home/kgrover/workspace/nby/source/controllers.js",
+		"/home/kgrover/workspace/nby/package.json",
+		"/home/kgrover/workspace/paystream/app/components/bitcoin.js",
+		"/home/kgrover/workspace/paystream/app/client/client.js",
+		"/home/kgrover/workspace/paystream/app/client/controller.js",
+		"/home/kgrover/workspace/paystream/app/provider/provider.js",
+		"/home/kgrover/workspace/paystream/app/provider/controller.js",
+		"/home/kgrover/workspace/paystream/app/app.js",
+		"/home/kgrover/workspace/paystream/app/app.css",
+		"/home/kgrover/workspace/CouplingIO/public/angular/app.js",
+		"/home/kgrover/workspace/CouplingIO/public/angular/services.js",
+		"/home/kgrover/workspace/CouplingIO/public/angular/controllers.js",
+		"/home/kgrover/workspace/CouplingIO/views/partials/home.html",
+		"/home/kgrover/workspace/CouplingIO/views/index.html",
+		"/home/kgrover/workspace/CouplingIO/routes/routes.js",
+		"/home/kgrover/workspace/CouplingIO/public/libs/bootstrap-social/bootstrap-social.css",
+		"/home/kgrover/workspace/CouplingIO/package.json",
+		"/home/kgrover/workspace/CouplingIO/views/partials/login.html",
+		"/home/kgrover/workspace/CouplingIO/handlers/AuthHandler.js",
+		"/home/kgrover/workspace/CouplingIO/node_modules/passport-google-oauth/node_modules/passport-oauth/package.json",
+		"/home/kgrover/workspace/CouplingIO/node_modules/passport-google-oauth/node_modules/pkginfo/package.json",
+		"/home/kgrover/workspace/CouplingIO/node_modules/passport-google-oauth/package.json",
+		"/home/kgrover/workspace/CouplingIO/node_modules/mongoose/package.json",
+		"/home/kgrover/workspace/CouplingIO/node_modules/mongodb/package.json",
+		"/home/kgrover/workspace/CouplingIO/server.js",
+		"/home/kgrover/workspace/CouplingIO/public/css/style.css",
+		"/home/kgrover/workspace/CouplingIO/public/angular/directives.js",
+		"/home/kgrover/workspace/CouplingIO/public/angular/routingConfig.js",
+		"/home/kgrover/workspace/CouplingIO/schemas/user.js",
+		"/home/kgrover/workspace/CouplingIO/views/partials/issueCoupon.html",
+		"/home/kgrover/workspace/CouplingIO/README.md",
+		"/home/kgrover/workspace/kawalseed/public/angular/app.js",
+		"/home/kgrover/workspace/flapper/home.html",
+		"/home/kgrover/workspace/flapper/index.html",
+		"/home/kgrover/workspace/flapper/app.js",
+		"/home/kgrover/workspace/kawalseed/public/scripts/profiles.js",
+		"/home/kgrover/workspace/kawalseed/views/messages.html",
+		"/home/kgrover/workspace/kawalseed/views/index.html",
+		"/home/kgrover/workspace/kawalseed/public/scripts/kawalseed.js",
+		"/home/kgrover/workspace/kawalseed/views/bitcoin.html",
+		"/home/kgrover/workspace/kawalseed/routes/routes.js",
+		"/home/kgrover/workspace/kawalseed/routes/profiles.js",
+		"/home/kgrover/workspace/kawalseed/views/profiles.html",
+		"/home/kgrover/workspace/kawalseed/server.js",
+		"/home/kgrover/workspace/kawalseed/views/404.html",
+		"/home/kgrover/workspace/kawalseed/bower.json",
+		"/home/kgrover/workspace/kawalseed/views/hello.html",
+		"/home/kgrover/workspace/kawalseed/package.json",
+		"/home/kgrover/workspace/fasttrack-python/codekata/wordchain.py",
+		"/home/kgrover/workspace/fasttrack-python/13-Generators/tree-print.py",
+		"/home/kgrover/workspace/fasttrack-python/13-Generators/myGenerator.py",
+		"/home/kgrover/workspace/fasttrack-python/wordsModule.py",
+		"/home/kgrover/workspace/fasttrack-python/04-UsingModules/e_to_the_jpi.py",
+		"/home/kgrover/workspace/fasttrack-python/04-UsingModules/change_path.py",
+		"/home/kgrover/workspace/fasttrack-python/04-UsingModules/print_my_argv.py",
+		"/home/kgrover/workspace/fasttrack-python/12-Decorators/myDecorators.py",
+		"/tmp/wordFile",
+		"/home/kgrover/workspace/Storj/downstream-farmer/data/identities.json",
+		"/home/kgrover/vagrant/mango/lib/python2.7/site-packages/mezzanine/blog/urls.py",
+		"/home/kgrover/vagrant/mango/noboundaries/noboundaries/settings.py",
+		"/home/kgrover/vagrant/mango/noboundaries/noboundaries/urls.py",
+		"/home/kgrover/vagrant/mango/lib/python2.7/site-packages/mezzanine/urls.py",
+		"/home/kgrover/vagrant/mango/lib/python2.7/site-packages/mezzanine/core/views.py",
+		"/home/kgrover/vagrant/mango/lib/python2.7/site-packages/mezzanine/blog/views.py",
+		"/home/kgrover/vagrant/mango/lib/python2.7/site-packages/mezzanine/forms/models.py",
+		"/home/kgrover/workspace/Storj/downstream-node/downstream_node/config.py",
+		"/home/kgrover/vagrant/mango/noboundaries/requirements.txt",
+		"/home/kgrover/workspace/assemblycoins/readme.md",
+		"/home/kgrover/workspace/assemblycoins/assemblycoins/main.py",
+		"/home/kgrover/workspace/env/assembly/lib/python2.7/UserDict.py",
+		"/home/kgrover/workspace/assemblycoins/assemblycoins/bitsource.py"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<project>",
+			"/home/kgrover/vagrant/mango/static"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"hexo-cli",
+			"\"",
+			"register/",
+			"UserDB",
+			"passport",
+			"auth_routes",
+			"        \n",
+			"emialGood",
+			"UserDict",
+			"include",
+			".jpg",
+			"*.jpg",
+			"bg1.jpg",
+			".jpg",
+			"bg1.jpg",
+			"<img",
+			"comment",
+			"site"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"emailGood"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "noBoundaries.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 276.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

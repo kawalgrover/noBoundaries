@@ -66,6 +66,14 @@ angular
         templateUrl: 'views/event-edit.html',
         controller: 'EventEditCtrl'
       })
+      .when('//events/:id/delete', {
+        templateUrl: 'views/events-delete.html',
+        controller: 'EventsDeleteCtrl'
+      })
+      .when('/contact', {
+        templateUrl: 'views/contact-us.html',
+        controller: 'ContactUsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -83,4 +91,7 @@ angular
   })
   .factory('Events', function(RegisterRestangular){
     return RegisterRestangular.service('events');
+  })
+  .factory('Contact', function(RegisterRestangular){
+    return RegisterRestangular.service('contact');
   });

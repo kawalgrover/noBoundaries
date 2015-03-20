@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:RegistrationEditCtrl
+ * @name noBoundariesApp.controller:RegistrationEditCtrl
  * @description
  * # RegistrationEditCtrl
- * Controller of the clientApp
+ * Controller of the noBoundariesApp
  */
 angular.module('noBoundariesApp')
   .controller('RegistrationEditCtrl', function ($scope, $routeParams, Register, $location) {

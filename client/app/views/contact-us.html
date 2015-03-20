@@ -1,0 +1,22 @@
+<form role="form">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name" ng-model="contact.name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" id="email" placeholder="Email" ng-model="contact.email">
+  </div>
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <input type="text" class="form-control" id="subject" placeholder="Subject" ng-model="contact.subject">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" id="description" placeholder="Description" ng-model="contact.description"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary" ng-click="saveFeedback()">Submit</button>
+</form>
+
+
