@@ -15,7 +15,7 @@ angular
   ])
   .config(function ($routeProvider, RestangularProvider) {
 
-    RestangularProvider.setBaseUrl('http://localhost:3000');
+    RestangularProvider.setBaseUrl('http://localhost:3000/');
 
     $routeProvider
       .when('/', {
@@ -26,11 +26,15 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginViewCtrl'
+      })
       .when('/register', {
         templateUrl: 'views/register.html',
         controller: 'RegisterCtrl'
       })
-      .when('create/register', {
+      .when('/create/register', {
         templateUrl: 'views/registration-add.html',
         controller: 'RegistrationAddCtrl'
       })
@@ -66,7 +70,7 @@ angular
         templateUrl: 'views/event-edit.html',
         controller: 'EventEditCtrl'
       })
-      .when('//events/:id/delete', {
+      .when('/events/:id/delete', {
         templateUrl: 'views/events-delete.html',
         controller: 'EventsDeleteCtrl'
       })
