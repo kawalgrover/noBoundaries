@@ -23,52 +23,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <header>
-      <div class="navbar navbar-default navbar-static-top" role="navigation">
-          <div class="container-fluid">
-              <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="#/">
-                      <i class="fa fa-heart fa-2x"></i> 
-                  </a>
-              </div>
-              <div class="collapse navbar-collapse" id="js-navbar-collapse">
-                  <ul class="nav navbar-nav navbar-left" ng-show="userOnline">
-                      <li><a ng-href="#/"><i class="fa fa-search fa-2x"> Find Sessions</i></a></li>
-                  </ul>
-                  <ul class="nav navbar-nav navbar-right" ng-show="!userOnline">
-                      <li><a ng-href="#/login"><i class="fa fa-user fa-2x"> Login</i></a></li>
-                      <li><a ng-href="#/register"><i class="fa fa-user-plus fa-2x"> Register</i></a></li>
-                  </ul>
-                  <ul class="nav navbar-nav navbar-right" ng-show="userOnline">
-                      <li><a ng-href="#/home"><i class="fa fa-user fa-2x"> My Sessions</i></a></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </header>
-      
-    <div ng-view="" class="main"></div>
+    <div ng-include="'views/header.html'"></div>
 
-  <footer>
-    <div class="col-lg-4 col-md-4 text-left">
-      <h2 class="no-margin">No Boundaries</h2>
-      <div class="phrase">Yoga Therapy</div>
-    </div>
-    <div class="col-lg-8 col-md-8 text-right">
-      <a href="" class="data-footer"><i class="fa fa-leanpub"></i> Blog</a>
-      <a href="#/contact" class="data-footer" title="Contact me!"><i class="fa fa-envelope"></i> Contact</a>
-      <a href="" class="data-footer" id="gh" target="_blank" title="Twitter"><i class="fa fa-twitter"></i> Twitter</a>
-      <a href="" class="data-footer" target="_blank" title="facebook"><i class="fa fa-facebook"></i> Facebook</a>
-      <br><br>
-      <a id="location" class="data-footer location-footer"><i class="fa fa-map-marker"></i> 1755 Grassland Parkway Suite B, Alpharetta, GA 30004</a>
-    </div>
-  </footer>
+    <div ui-view="" class="main"></div>
+
+    <div ng-include="'views/footer.html'"></div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -91,6 +50,7 @@
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <script src="bower_components/restangular/dist/restangular.js"></script>
     <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

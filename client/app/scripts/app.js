@@ -10,77 +10,120 @@
  */
 angular
   .module('noBoundariesApp', [
-    'ngRoute',
+    'ui.router',
     'restangular'
   ])
-  .config(function ($routeProvider, RestangularProvider) {
+  .config(function ($stateProvider, RestangularProvider) {
 
-    RestangularProvider.setBaseUrl('http://localhost:3000/');
+    RestangularProvider.setBaseUrl('http://localhost:3000');
 
-    $routeProvider
-      .when('/', {
+    $stateProvider
+      .state('home', {
+        url: '/',
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        data: {
+          requireLogin: false
+        }
+
       })
-      .when('/about', {
+      .state('home.about', {
+        url: '/about',
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        controller: 'AboutCtrl',
+        data: {
+          requireLogin: false
+        }
       })
-      .when('/login', {
-        templateUrl: 'views/login.html',
-        controller: 'LoginViewCtrl'
-      })
-      .when('/register', {
+      .state('register', {
+        url: '/register',
         templateUrl: 'views/register.html',
-        controller: 'RegisterCtrl'
+        controller: 'RegisterCtrl',
+        data: {
+          requireLogin: true
+        }
       })
-      .when('/create/register', {
+      .state('register.create', {
+        url: 'create/register',
         templateUrl: 'views/registration-add.html',
-        controller: 'RegistrationAddCtrl'
+        controller: 'RegistrationAddCtrl',
+        data: {
+          requireLogin: true
+        }
       })
-      .when('/register/:id', {
+      .state('register.view', {
+        url: '/register/:id',
         templateUrl: 'views/registration-view.html',
-        controller: 'RegistrationViewCtrl'
+        controller: 'RegistrationViewCtrl',
+        data: {
+          requireLogin: true
+        }
       })
-      .when('/register/:id/delete', {
+      .state('register.delete', {
+        url: '/register/:id/delete',
         templateUrl: 'views/registration-delete.html',
-        controller: 'RegistrationDeleteCtrl'
+        controller: 'RegistrationDeleteCtrl',
+        data: {
+          requireLogin: true
+        }
       })
-      .when('/register/:id/edit', {
+      .state('register.edit', {
+        url: '/register/:id/edit',
         templateUrl: 'views/registration-edit.html',
-        controller: 'RegistrationEditCtrl'
+        controller: 'RegistrationEditCtrl',
+        data: {
+          requireLogin: true
+        }
       })
-      .when('/events', {
+      .state('events', {
+        url: '/events',
         templateUrl: 'views/events.html',
-        controller: 'EventsCtrl'
+        controller: 'EventsCtrl',
+        data: {
+          requireLogin: false
+        }
       })
-      .when('/create/events', {
+      .state('events.create', {
+        url: '/create/events',
         templateUrl: 'views/events-add.html',
-        controller: 'EventsAddCtrl'
+        controller: 'EventsAddCtrl',
+        data: {
+          requireLogin: true
+        }
       })
-      .when('/events/:id', {
+      .state('events.view', {
+        url: '/events/:id',
         templateUrl: 'views/event-view.html',
-        controller: 'EventViewCtrl'
+        controller: 'EventViewCtrl',
+        data: {
+          requireLogin: false
+        }
       })
-      .when('/events/:id/delete', {
+      .state('events.delete', {
+        url: '/events/:id/delete',
         templateUrl: 'views/event-delete.html',
-        controller: 'EventDeleteCtrl'
+        controller: 'EventDeleteCtrl',
+        data: {
+          requireLogin: true
+        }
       })
-      .when('/events/:id/edit', {
+      .state('events.edit', {
+        url: '/events/:id/edit',
         templateUrl: 'views/event-edit.html',
-        controller: 'EventEditCtrl'
+        controller: 'EventEditCtrl',
+        data: {
+          requireLogin: true
+        }
       })
-      .when('/events/:id/delete', {
-        templateUrl: 'views/events-delete.html',
-        controller: 'EventsDeleteCtrl'
-      })
-      .when('/contact', {
+      .state('contact', {
+        url: '/contact',
         templateUrl: 'views/contact-us.html',
-        controller: 'ContactUsCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
+        controller: 'ContactUsCtrl',
+        data: {
+          requireLogin: false
+        }
       });
+
   })
   .factory('RegisterRestangular', function(Restangular) {
     return Restangular.withConfig(function(RestangularConfigurer) {
