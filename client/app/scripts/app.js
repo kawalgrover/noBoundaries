@@ -83,42 +83,42 @@ var app = angular
           requireLogin: true
         }
       })
-      .state('events', {
-        url: '/events',
-        templateUrl: 'views/events.html',
-        controller: 'EventsCtrl',
+      .state('sessions', {
+        url: '/sessions',
+        templateUrl: 'views/sessions.html',
+        controller: 'SessionsCtrl',
         data: {
           requireLogin: false
         }
       })
-      .state('events.create', {
-        url: '/create/events',
-        templateUrl: 'views/events-add.html',
-        controller: 'EventsAddCtrl',
+      .state('sessions.create', {
+        url: '/create/sessions',
+        templateUrl: 'views/sessions-add.html',
+        controller: 'SessionsAddCtrl',
         data: {
           requireLogin: true
         }
       })
-      .state('events.view', {
-        url: '/events/:id',
+      .state('sessions.view', {
+        url: '/sessions/:id',
         templateUrl: 'views/event-view.html',
-        controller: 'EventViewCtrl',
+        controller: 'SessionsViewCtrl',
         data: {
           requireLogin: false
         }
       })
-      .state('events.delete', {
-        url: '/events/:id/delete',
+      .state('sessions.delete', {
+        url: '/sessions/:id/delete',
         templateUrl: 'views/event-delete.html',
-        controller: 'EventDeleteCtrl',
+        controller: 'SessionsDeleteCtrl',
         data: {
           requireLogin: true
         }
       })
-      .state('events.edit', {
-        url: '/events/:id/edit',
+      .state('sessions.edit', {
+        url: '/sessions/:id/edit',
         templateUrl: 'views/event-edit.html',
-        controller: 'EventEditCtrl',
+        controller: 'SessionsEditCtrl',
         data: {
           requireLogin: true
         }
@@ -144,8 +144,8 @@ var app = angular
     return RegisterRestangular.service('register');
 
   })
-  .factory('Events', function(RegisterRestangular){
-    return RegisterRestangular.service('events');
+  .factory('Sessions', function(RegisterRestangular){
+    return RegisterRestangular.service('sessions');
   })
   .factory('Contact', function(RegisterRestangular){
     return RegisterRestangular.service('contact');

@@ -26,7 +26,7 @@ app.use(function(req, res, next){
 
 
 //Connect to MongoDB
-mongoose.connect('mongodb://localhost/noBoundaries');
+mongoose.connect('mongodb://admin:admin@ds035127.mongolab.com:35127/noboundaries');
 mongoose.connection.once('open', function(){
 
     //load the models

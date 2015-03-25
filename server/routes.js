@@ -1,7 +1,7 @@
 
 module.exports = {
     '/register': require('./controllers/registerController'),
-    '/events' : require('./controllers/eventsController'),
+    '/sessions' : require('./controllers/sessionsController'),
     '/contact' : require('./controllers/contactsController'),
     '/user' : require('./controllers/usersController')
 };

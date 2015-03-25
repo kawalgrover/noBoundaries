@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name noBoundariesApp.controller:EventsDeleteCtrl
+ * @name noBoundariesApp.controller:SessionsDeleteCtrl
  * @description
- * # EventsDeleteCtrl
+ * # SessionsDeleteCtrl
  * Controller of the noBoundariesApp
  */
-app.controller('EventsDeleteCtrl', function ($scope) {
+app.controller('SessionsDeleteCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

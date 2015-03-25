@@ -137,6 +137,9 @@ footer {
 .event-panel{
   width:450px;
 }
+.sessions-panel{
+  width:900px;
+}
 
 .text-contact{
   resize:vertical; 

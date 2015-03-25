@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 //create the Events schema
-var eventSchema = new mongoose.Schema({
+var sessionSchema = new mongoose.Schema({
     title : {
         type: String,
         required: true
@@ -37,4 +37,4 @@ var eventSchema = new mongoose.Schema({
 
 });
 
-module.exports = eventSchema;
+module.exports = sessionSchema;

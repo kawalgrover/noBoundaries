@@ -9,7 +9,7 @@ var registrationSchema = new mongoose.Schema({
     },
     registeredFor : {
         type:  mongoose.Schema.Types.ObjectId,
-        ref: 'events',
+        ref: 'sessions',
         required: true
     }
 });
