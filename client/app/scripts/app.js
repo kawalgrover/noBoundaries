@@ -8,9 +8,10 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('noBoundariesApp', [
     'ui.router',
+    'ui.bootstrap',
     'restangular'
   ])
   .config(function ($stateProvider, RestangularProvider) {
@@ -25,12 +26,19 @@ angular
         data: {
           requireLogin: false
         }
-
       })
       .state('home.about', {
         url: '/about',
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
+        data: {
+          requireLogin: false
+        }
+      })
+      .state('login', {
+        url: '/login',
+        templateUrl: 'views/login.html',
+        controller: 'LoginModalCtrl',
         data: {
           requireLogin: false
         }
@@ -117,7 +125,7 @@ angular
       })
       .state('contact', {
         url: '/contact',
-        templateUrl: 'views/contact-us.html',
+        templateUrl: 'views/contact.html',
         controller: 'ContactUsCtrl',
         data: {
           requireLogin: false
@@ -141,4 +149,85 @@ angular
   })
   .factory('Contact', function(RegisterRestangular){
     return RegisterRestangular.service('contact');
+  })
+  .factory('User', function(RegisterRestangular){
+    return RegisterRestangular.service('user');
   });
+
+
+
+app.service('loginModal', function ($modal, $rootScope) {
+
+  function assignCurrentUser (user) {
+    $rootScope.currentUser = user;
+    return user;
+  }
+
+  return function() {
+    var instance = $modal.open({
+      templateUrl: 'views/login.html',
+      controller: 'LoginModalCtrl',
+      controllerAs: 'LoginModalCtrl'
+    })
+
+    return instance.result.then(assignCurrentUser);
+  };
+});
+
+
+app.config(function ($httpProvider) {
+
+  $httpProvider.interceptors.push(function ($timeout, $q, $injector) {
+    var loginModal, $http, $state;
+
+    // this trick must be done so that we don't receive
+    // `Uncaught Error: [$injector:cdep] Circular dependency found`
+    $timeout(function () {
+      loginModal = $injector.get('loginModal');
+      $http = $injector.get('$http');
+      $state = $injector.get('$state');
+    });
+
+    return {
+      responseError: function (rejection) {
+        if (rejection.status !== 401) {
+          return rejection;
+        }
+
+        var deferred = $q.defer();
+
+        loginModal()
+          .then(function () {
+            deferred.resolve( $http(rejection.config) );
+          })
+          .catch(function () {
+            $state.go('home');
+            deferred.reject(rejection);
+          });
+
+        return deferred.promise;
+      }
+    };
+  });
+
+});
+
+
+app.run(function($rootScope, $state, loginModal) {
+
+  $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
+    var requireLogin = toState.data.requireLogin;
+
+    if (requireLogin && typeof $rootScope.currentUser === 'undefined') {
+      event.preventDefault();
+
+      loginModal()
+        .then(function () {
+          return $state.go(toState.name, toParams);
+        })
+        .catch(function() {
+          return $state.go('home')
+        })
+    }
+  });
+});

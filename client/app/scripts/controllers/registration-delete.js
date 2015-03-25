@@ -7,8 +7,7 @@
  * # RegistrationDeleteCtrl
  * Controller of the clientApp
  */
-angular.module('noBoundariesApp')
-  .controller('RegistrationDeleteCtrl', function ($scope, $routeParams, Register, $location) {
+app.controller('RegistrationDeleteCtrl', function ($scope, $routeParams, Register, $location) {
 
     $scope.registration = Register.One($routeParams.id).get().$object;
 

@@ -7,7 +7,6 @@
  * # EventsCtrl
  * Controller of the noBoundariesApp
  */
-angular.module('noBoundariesApp')
-  .controller('EventsCtrl', function ($scope, Events) {
+app.controller('EventsCtrl', function ($scope, Events) {
     $scope.events = Events.getList().$object;
   });

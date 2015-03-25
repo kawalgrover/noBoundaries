@@ -7,8 +7,7 @@
  * # RegistrationAddCtrl
  * Controller of the clientApp
  */
-angular.module('noBoundariesApp')
-  .controller('RegistrationAddCtrl', function ($scope, Register, $location) {
+app.controller('RegistrationAddCtrl', function ($scope, Register, $location) {
     $scope.registration = {};
     $scope.saveRegistration = function(){
         Register.post($scope.registration).then(function() {

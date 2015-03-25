@@ -7,8 +7,7 @@
  * # RegistrationEditCtrl
  * Controller of the noBoundariesApp
  */
-angular.module('noBoundariesApp')
-  .controller('RegistrationEditCtrl', function ($scope, $routeParams, Register, $location) {
+app.controller('RegistrationEditCtrl', function ($scope, $routeParams, Register, $location) {
     $scope.editRegistration = true;
     $scope.registration = {};
     Register.one($routeParams.id).get().then(function(registration) {

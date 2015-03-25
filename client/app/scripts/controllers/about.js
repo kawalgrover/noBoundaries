@@ -7,8 +7,7 @@
  * # AboutCtrl
  * Controller of the clientApp
  */
-angular.module('noBoundariesApp')
-  .controller('AboutCtrl', function ($scope) {
+app.controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

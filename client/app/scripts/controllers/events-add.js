@@ -7,8 +7,7 @@
  * # EventsAddCtrl
  * Controller of the noBoundariesApp
  */
-angular.module('noBoundariesApp')
-  .controller('EventsAddCtrl', function ($scope, Events, $location) {
+app.controller('EventsAddCtrl', function ($scope, Events, $location) {
     $scope.event = {};
     $scope.saveEvent = function(){
         Events.post($scope.event).then(function(){

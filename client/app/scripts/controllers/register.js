@@ -7,7 +7,6 @@
  * # RegisterCtrl
  * Controller of the clientApp
  */
-angular.module('noBoundariesApp')
-  .controller('RegisterCtrl', function ($scope, Register) {
+app.controller('RegisterCtrl', function ($scope, Register) {
     $scope.registrations = Register.getList().$object;
   });

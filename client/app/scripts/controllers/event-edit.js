@@ -7,8 +7,7 @@
  * # EventEditCtrl
  * Controller of the noBoundariesApp
  */
-angular.module('noBoundariesApp')
-  .controller('EventEditCtrl', function ($scope, $routeParams, Events, $location) {
+app.controller('EventEditCtrl', function ($scope, $routeParams, Events, $location) {
     $scope.editEvent = true;
     $scope.event = {};
 

@@ -7,8 +7,7 @@
  * # EventDeleteCtrl
  * Controller of the noBoundariesApp
  */
-angular.module('noBoundariesApp')
-  .controller('EventDeleteCtrl', function ($scope, $routeParams, Events, $location) {
+app.controller('EventDeleteCtrl', function ($scope, $routeParams, Events, $location) {
 
     $scope.event = Events.One($routeParams.id).get().$object;
 
