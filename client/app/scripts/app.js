@@ -93,15 +93,15 @@ var app = angular
       })
       .state('sessions.create', {
         url: '/create/sessions',
-        templateUrl: 'views/sessions-add.html',
+        templateUrl: 'views/session-add.html',
         controller: 'SessionsAddCtrl',
         data: {
-          requireLogin: true
+          requireLogin: false
         }
       })
       .state('sessions.view', {
         url: '/sessions/:id',
-        templateUrl: 'views/event-view.html',
+        templateUrl: 'views/session-view.html',
         controller: 'SessionsViewCtrl',
         data: {
           requireLogin: false
@@ -109,7 +109,7 @@ var app = angular
       })
       .state('sessions.delete', {
         url: '/sessions/:id/delete',
-        templateUrl: 'views/event-delete.html',
+        templateUrl: 'views/sessions-delete.html',
         controller: 'SessionsDeleteCtrl',
         data: {
           requireLogin: true
@@ -117,7 +117,7 @@ var app = angular
       })
       .state('sessions.edit', {
         url: '/sessions/:id/edit',
-        templateUrl: 'views/event-edit.html',
+        templateUrl: 'views/session-edit.html',
         controller: 'SessionsEditCtrl',
         data: {
           requireLogin: true
@@ -142,7 +142,6 @@ var app = angular
   })
   .factory('Register', function(RegisterRestangular) {
     return RegisterRestangular.service('register');
-
   })
   .factory('Sessions', function(RegisterRestangular){
     return RegisterRestangular.service('sessions');

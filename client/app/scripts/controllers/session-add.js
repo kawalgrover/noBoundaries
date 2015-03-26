@@ -9,7 +9,7 @@
  */
 app.controller('SessionsAddCtrl', function ($scope, Sessions, $location) {
     $scope.session = {};
-    $scope.saveEvent = function(){
+    $scope.save = function(){
         Sessions.post($scope.session).then(function(){
             $location.path('/sessions');
         });

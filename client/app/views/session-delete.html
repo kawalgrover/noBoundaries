@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  	<div class="row row-home text-center">
+   		<div class="jumbotron home-panel sessions-panel">
+			<form role="form">
+				<p>Are you sure you wish to delete the session {{ session.title }}?</p>
+				<div class="form-group">
+					<input type="submit" class="btn btn-danger" ng-click="deleteSession()" value="Yes">
+					<button ng-click="back()" type="button" class="btn btn-default">No</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  	<div class="row row-home text-center">
+   		<div class="jumbotron home-panel sessions-panel">
+			<form role="form">
+				<div class="form-group">
+					<label for="sessionTitle">Title</label>
+					<input type="text" class="form-control" id="sessionTitle" placeholder="Title" ng-model="session.title">
+				</div>
+				<div class="form-group">
+					<label for="subTitle">Sub title</label>
+					<input type="text" class="form-control" id="subTitle" placeholder="Subtitle" ng-model="session.subTitle">
+				</div>
+				<div class="form-group">
+					<label for="subTitle">Description</label>
+					<textarea class="form-control" id="description" placeholder="Description" ng-model="session.description"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="sessionStart">Session Start</label>
+					<input type="date" class="form-control" id="sessionStart" placeholder="From" ng-model="session.from"></input>
+				</div>
+				<div class="form-group">
+					<label for="sessionEnd">Session Start</label>
+					<input type="date" class="form-control" id="sessionEnd" placeholder="To" ng-model="session.to"></input>
+				</div>
+				<div class="form-group">
+					<label for="offeredBy">Offered By</label>
+					<input type="text" class="form-control" id="offeredBy" placeholder="Offered By" ng-model="session.offeredBy">
+				</div>
+				<div class="form-group">
+					<label for="address1">Address</label>
+					<input type="text" class="form-control" id="address1" placeholder="Address" ng-model="session.location.address1">
+				</div>
+				<div class="form-group">
+					<label for="address2">Address</label>
+					<input type="text" class="form-control" id="address2" placeholder="Address" ng-model="session.location.address2">
+				</div>
+				<div class="form-group">
+					<label for="city">City</label>
+					<input type="text" class="form-control" id="city" placeholder="City" ng-model="session.location.city">
+				</div>
+				<div class="form-group">
+					<label for="state">State</label>
+					<input type="text" class="form-control" id="state" placeholder="State" ng-model="session.location.state">
+				</div>
+				<div class="form-group">
+					<label for="zip">Zip</label>
+					<input type="text" class="form-control" id="zip" placeholder="Zip" ng-model="session.location.zip">
+				</div>
+				<button type="submit" class="btn btn-primary" ng-click="save()">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
