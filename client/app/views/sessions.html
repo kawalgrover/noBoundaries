@@ -12,21 +12,21 @@
         </thead>
         <tbody>
             <tr ng-repeat="session in sessions">
-                <td><a ng-href="/#/sessions/{{session._id}}"> {{ session.title }} </a></td>
+                <td><a ui-sref="sessionView({ id: session._id })"> {{ session.title }} </a></td>
                 <td>{{ session.to }} </td>
                 <td>
                     <div class="button-group">
-                        <a ng-href="/#/sessions/{{session._id}}/edit" class="btn btn-default">
+                        <a ui-sref="sessionEdit({ id: session._id })" class="btn btn-default">
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
-                        <a ng-href="/#/sessions/{{session._id}}/delete" class="btn btn-danger">
+                        <a ui-sref="sessionDelete({ id: session._id })" class="btn btn-danger">
                             <span class="glyphicon glyphicon-remove-circle"></span>
                         </a>
                     </div>
                 </td>
             </tr>
         </tbody>
-        </table>  
+        </table>
       </div>
       <div id="map-content">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3302.145362238168!2d-84.24893999999999!3d34.14262300000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f59da29fd4505d%3A0x87a5e5171b8d5499!2s1755+Grassland+Pkwy%2C+Alpharetta%2C+GA+30004%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1426858596791" class="map" frameborder="0" style="border:0"></iframe>

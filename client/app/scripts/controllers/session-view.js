@@ -7,7 +7,7 @@
  * # EventViewCtrl
  * Controller of the noBoundariesApp
  */
-app.controller('SessionViewCtrl', function ($scope, $routeParams, Sessions) {
+app.controller('SessionViewCtrl', function ($scope, $stateParams, Sessions) {
     $scope.viewSession = true;
-    $scope.session = Sessions.one($routeParams.id).get().$object;
+    $scope.session = Sessions.one($stateParams.id).get().$object;
   });
