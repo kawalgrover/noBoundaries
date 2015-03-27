@@ -10,13 +10,13 @@
 			</div>
 			<div class="collapse navbar-collapse" id="js-navbar-collapse">
 				<ul class="nav navbar-nav navbar-left">
-					<li><a ng-href="#/sessions"><i class="fa fa-search fa-2x"> Find Sessions</i></a></li>
+					<li><a ui-sref="sessions"><i class="fa fa-search fa-2x"> Find Sessions</i></a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right" ng-show="!userOnline">
-					<li><a ng-href="#/login"><i class="fa fa-user fa-2x"> Login</i></a></li>
+					<li><a ui-sref="login"><i class="fa fa-user fa-2x"> Login</i></a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right" ng-show="userOnline">
-					<li><a ng-href="#/sessions"><i class="fa fa-user fa-2x"> My Sessions</i></a></li>
+					<li><a ui-sref="register"><i class="fa fa-user fa-2x"> My Sessions</i></a></li>
 				</ul>
 			</div>
 		</div>

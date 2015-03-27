@@ -91,7 +91,7 @@ var app = angular
           requireLogin: false
         }
       })
-      .state('sessions.create', {
+      .state('/create/sessions', {
         url: '/create/sessions',
         templateUrl: 'views/session-add.html',
         controller: 'SessionsAddCtrl',
@@ -99,15 +99,15 @@ var app = angular
           requireLogin: false
         }
       })
-      .state('sessions.view', {
+      .state('sessionView', {
         url: '/sessions/:id',
         templateUrl: 'views/session-view.html',
-        controller: 'SessionsViewCtrl',
+        controller: 'SessionViewCtrl',
         data: {
           requireLogin: false
         }
       })
-      .state('sessions.delete', {
+      .state('sessionDelete', {
         url: '/sessions/:id/delete',
         templateUrl: 'views/sessions-delete.html',
         controller: 'SessionsDeleteCtrl',
@@ -115,12 +115,12 @@ var app = angular
           requireLogin: true
         }
       })
-      .state('sessions.edit', {
+      .state('sessionEdit', {
         url: '/sessions/:id/edit',
         templateUrl: 'views/session-edit.html',
-        controller: 'SessionsEditCtrl',
+        controller: 'SessionEditCtrl',
         data: {
-          requireLogin: true
+          requireLogin: false
         }
       })
       .state('contact', {
@@ -167,7 +167,7 @@ app.service('loginModal', function ($modal, $rootScope) {
       templateUrl: 'views/login.html',
       controller: 'LoginModalCtrl',
       controllerAs: 'LoginModalCtrl'
-    })
+    });
 
     return instance.result.then(assignCurrentUser);
   };
@@ -225,8 +225,8 @@ app.run(function($rootScope, $state, loginModal) {
           return $state.go(toState.name, toParams);
         })
         .catch(function() {
-          return $state.go('home')
-        })
+          return $state.go('home');
+        });
     }
   });
 });
