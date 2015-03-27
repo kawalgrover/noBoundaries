@@ -20,24 +20,24 @@ app.controller('MainCtrl', function ($scope) {
 
 	    $('.date-picker').each(function () {
 	        var $datepicker = $(this),
-	            cur_date = ($datepicker.data('date') ? moment($datepicker.data('date'), "YYYY/MM/DD") : moment()),
+	            curDate = ($datepicker.data('date') ? moment($datepicker.data('date'), 'YYYY/MM/DD') : moment()),
 	            format = {
-	                "weekday" : ($datepicker.find('.weekday').data('format') ? $datepicker.find('.weekday').data('format') : "dddd"),
-	                "date" : ($datepicker.find('.date').data('format') ? $datepicker.find('.date').data('format') : "MMMM Do"),
-	                "year" : ($datepicker.find('.year').data('year') ? $datepicker.find('.weekday').data('format') : "YYYY")
+	                'weekday' : ($datepicker.find('.weekday').data('format') ? $datepicker.find('.weekday').data('format') : 'dddd'),
+	                'date' : ($datepicker.find('.date').data('format') ? $datepicker.find('.date').data('format') : 'MMMM Do'),
+	                'year' : ($datepicker.find('.year').data('year') ? $datepicker.find('.weekday').data('format') : 'YYYY')
 	            };
 
-	        function updateDisplay(cur_date) {
-	            $datepicker.find('.date-container > .weekday').text(cur_date.format(format.weekday));
-	            $datepicker.find('.date-container > .date').text(cur_date.format(format.date));
-	            $datepicker.find('.date-container > .year').text(cur_date.format(format.year));
-	            $datepicker.data('date', cur_date.format('YYYY/MM/DD'));
+	        function updateDisplay(curDate) {
+	            $datepicker.find('.date-container > .weekday').text(curDate.format(format.weekday));
+	            $datepicker.find('.date-container > .date').text(curDate.format(format.date));
+	            $datepicker.find('.date-container > .year').text(curDate.format(format.year));
+	            $datepicker.data('date', curDate.format('YYYY/MM/DD'));
 	            $datepicker.find('.input-datepicker').removeClass('show-input');
 	        }
 
-	        updateDisplay(cur_date);
+	        updateDisplay(curDate);
 
-	        $datepicker.on('click', '[data-toggle="calendar"]', function(event) {
+	        $datepicker.on('click', "[data-toggle='calendar']", function(event) {
 	            event.preventDefault();
 	            $datepicker.find('.input-datepicker').toggleClass('show-input');
 	        });
@@ -45,7 +45,7 @@ app.controller('MainCtrl', function ($scope) {
 	        $datepicker.on('click', '.input-datepicker > .input-group-btn > button', function(event) {
 	            event.preventDefault();
 	            var $input = $(this).closest('.input-datepicker').find('input'),
-	                date_format = ($input.data('format') ? $input.data('format') : "YYYY/MM/DD");
+	                date_format = ($input.data('format') ? $input.data('format') : 'YYYY/MM/DD');
 	            if (moment($input.val(), date_format).isValid()) {
 	               updateDisplay(moment($input.val(), date_format));
 	            }else{
@@ -53,54 +53,32 @@ app.controller('MainCtrl', function ($scope) {
 	            }
 	        });
 
-	        $datepicker.on('click', '[data-toggle="datepicker"]', function(event) {
+	        $datepicker.on('click', "[data-toggle='datepicker']", function(event) {
 	            event.preventDefault();
 
-	            var cur_date = moment($(this).closest('.date-picker').data('date'), "YYYY/MM/DD"),
-	                date_type = ($datepicker.data('type') ? $datepicker.data('type') : "days"),
-	                type = ($(this).data('type') ? $(this).data('type') : "add"),
+	            var curDate = moment($(this).closest('.date-picker').data('date'), 'YYYY/MM/DD'),
+	                dateType = ($datepicker.data('type') ? $datepicker.data('type') : 'days'),
+	                type = ($(this).data('type') ? $(this).data('type') : 'add'),
 	                amt = ($(this).data('amt') ? $(this).data('amt') : 1);
 
-	            if (type == "add") {
-	                cur_date = cur_date.add(date_type, amt);
-	            }else if (type == "subtract") {
-	                cur_date = cur_date.subtract(date_type, amt);
+	            if (type === 'add') {
+	                curDate = curDate.add(dateType, amt);
+	            }else if (type === 'subtract') {
+	                curDate = curDate.subtract(dateType, amt);
 	            }
 
-	            updateDisplay(cur_date);
+	            updateDisplay(curDate);
 	        });
 
-	        if ($datepicker.data('keyboard') == true) {
+	        if ($datepicker.data('keyboard') === true) {
 	            $(window).on('keydown', function(event) {
-	                if (event.which == 37) {
+	                if (event.which === 37) {
 	                    $datepicker.find('span:eq(0)').trigger('click');
-	                }else if (event.which == 39) {
+	                }else if (event.which === 39) {
 	                    $datepicker.find('span:eq(1)').trigger('click');
 	                }
 	            });
 	        }
-
 	    });
-		var mainContent = $("#content-panel").html();
-		var mapContent = $("#map-content").html();
-		$("#location").click(function() {
-			$('#content-panel').fadeOut("slow", function(){
-			   $(this).replaceWith(mapContent);
-			   $('#content-panel').fadeIn("slow");
-			});
-			$(".home-panel").animate({
-			width: "450px"
-			}, 1500 );
-		});
-		$("#back").click(function() {
-			console.log('yeah')
-			$('#content-panel').fadeOut("slow", function(){
-			   $(this).replaceWith(mainContent);
-			   $('#content-panel').fadeIn("slow");
-			});
-			$(".home-panel").animate({
-			width: "370px"
-			}, 1500 );
-		});
 	});
   });

@@ -1,39 +1,30 @@
-<div class="container-fluid">
-  <div class="row row-home text-center">
-    <div class="jumbotron home-panel sessions-panel">
-      <div id="content-panel">
-        <a class="btn btn-primary" href="#/create/sessions"><span class="glyphicon glyphicon-plus"></span> New Event</a>
-        <br>
-        <table class="table table-striped">
-        <thead>
-            <th>Event</th>
-            <th>Date</th>
-            <th>Host</th>
-        </thead>
-        <tbody>
-            <tr ng-repeat="session in sessions">
-                <td><a ng-href="/#/sessions/{{session._id}}"> {{ session.title }} </a></td>
-                <td>{{ session.to }} </td>
-                <td>
-                    <div class="button-group">
-                        <a ng-href="/#/sessions/{{session._id}}/edit" class="btn btn-default">
-                            <span class="glyphicon glyphicon-edit"></span>
-                        </a>
-                        <a ng-href="/#/sessions/{{session._id}}/delete" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove-circle"></span>
-                        </a>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-        </table>  
-      </div>
-      <div id="map-content">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3302.145362238168!2d-84.24893999999999!3d34.14262300000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f59da29fd4505d%3A0x87a5e5171b8d5499!2s1755+Grassland+Pkwy%2C+Alpharetta%2C+GA+30004%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1426858596791" class="map" frameborder="0" style="border:0"></iframe>
-        <div class="row text-center">
-          <div type="button" class="btn btn-sm btn-default" id="back">Go Back</div>
+<div class="container-fluid main-container">
+    <div class="row text-center">
+        <div class="box width2x-box">
+            <div id="content">
+                <a class="btn btn-primary" href="#/create/sessions"><span class="glyphicon glyphicon-plus"></span> New Session</a>
+                <br>
+                <table class="table table-striped">
+                    <thead>
+                        <th class="text-center">Event</th>
+                        <th class="text-center">Date</th>
+                        <th class="text-center">Host</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="session in sessions">
+                            <td><a ng-href="/#/sessions/{{session._id}}"> {{session.title}} </a> <small> {{session.sessionType}} </small></td>
+                            <td>{{session.to | date:'MM-dd HH:mm a'}} </td>
+                            <td>{{session.offeredBy}} </td>
+                            <td>
+                                <div class="button-group">
+                                    <a ng-href="/#/sessions/{{session._id}}/edit" class="btn btn-default"> <i class="fa fa-pencil"></i> </a>
+                                    <a ng-href="/#/sessions/{{session._id}}/delete" class="btn btn-danger"> <i class="fa fa-trash-o"></i> </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>  
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
