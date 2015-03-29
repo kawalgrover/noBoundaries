@@ -14,6 +14,9 @@ body {
 .main-container{
   padding-top: 100px;
 }
+.main-container-admin{
+  padding-top: 20px;
+}
 
 /* BOX */
 .box{
@@ -32,6 +35,9 @@ body {
   width:370px;
   opacity: 0.90;
 }
+.box-admin{
+  max-height: 500px;
+}
 .width-box{
   width:450px;
 }
@@ -39,8 +45,7 @@ body {
   width:900px;
 }
 #content{
-  overflow-x: auto;
-  overflow-y: auto;
+  
 }
 #map-content{
   display: none;
@@ -145,10 +150,16 @@ footer {
 .no-margin{
   margin: 0px;
 }
+.no-padding{
+  padding: 0px;
+}
 .text-contact{
   resize:vertical; 
   max-height:200px; 
   min-height:100px;
+}
+.in-line{
+  display: inline;
 }
 
 /*SERACH INPUT */

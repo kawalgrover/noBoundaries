@@ -1,53 +1,83 @@
-<div class="container-fluid main-container">
+<div class="container-fluid main-container-admin">
 	<div class="row text-center">
-		<div class="box">
-			<form role="form">
-				<div class="form-group">
-					<label for="sessionTitle">Title</label>
-					<input type="text" class="form-control" id="sessionTitle" placeholder="Title" ng-model="session.title">
-				</div>
-				<div class="form-group">
-					<label for="subTitle">Sub title</label>
-					<input type="text" class="form-control" id="subTitle" placeholder="Subtitle" ng-model="session.subTitle">
-				</div>
-				<div class="form-group">
-					<label for="subTitle">Description</label>
-					<textarea class="form-control" id="description" placeholder="Description" ng-model="session.description"></textarea>
-				</div>
-				<div class="form-group">
-					<label for="sessionStart">Session Start</label>
-					<input type="date" class="form-control" id="sessionStart" placeholder="From" ng-model="session.from"></input>
-				</div>
-				<div class="form-group">
-					<label for="sessionEnd">Session Start</label>
-					<input type="date" class="form-control" id="sessionEnd" placeholder="To" ng-model="session.to"></input>
-				</div>
-				<div class="form-group">
-					<label for="offeredBy">Offered By</label>
-					<input type="text" class="form-control" id="offeredBy" placeholder="Offered By" ng-model="session.offeredBy">
-				</div>
-				<div class="form-group">
-					<label for="address1">Address</label>
-					<input type="text" class="form-control" id="address1" placeholder="Address" ng-model="session.location.address1">
-				</div>
-				<div class="form-group">
-					<label for="address2">Address</label>
-					<input type="text" class="form-control" id="address2" placeholder="Address" ng-model="session.location.address2">
-				</div>
-				<div class="form-group">
-					<label for="city">City</label>
-					<input type="text" class="form-control" id="city" placeholder="City" ng-model="session.location.city">
-				</div>
-				<div class="form-group">
-					<label for="state">State</label>
-					<input type="text" class="form-control" id="state" placeholder="State" ng-model="session.location.state">
-				</div>
-				<div class="form-group">
-					<label for="zip">Zip</label>
-					<input type="text" class="form-control" id="zip" placeholder="Zip" ng-model="session.location.zip">
-				</div>
-				<button type="submit" class="btn btn-primary" ng-click="save()">Submit</button>
-			</form>
+		<div class="box width2x-box box-admin">
+            <div id="content">
+				<form role="form">
+					<div class="row">
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="form-group">
+								<label for="sessionTitle">Title</label>
+								<input type="text" class="form-control" id="sessionTitle" placeholder="Title" ng-model="session.title">
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="form-group">
+								<label for="subTitle">Sub title</label>
+								<input type="text" class="form-control" id="subTitle" placeholder="Subtitle" ng-model="session.subTitle">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+							<div class="form-group">
+								<label for="sessionStart">Session Start</label>
+								<div class="input-group input-datepicker">
+									<div class="input-group-addon"><span data-toggle="calendar" class="fa fa-calendar"></span></div>              
+				                    <input type="text" class="form-control" id="sessionStart" data-format="HH:MM" placeholder="HH:MM" ng-model="session.from">
+				                </div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+							<div class="form-group">
+								<label for="sessionEnd">Session End</label>
+								<div class="input-group input-datepicker">
+									<div class="input-group-addon"><span data-toggle="calendar" class="fa fa-calendar"></span></div>              
+				                    <input type="text" class="form-control" id="sessionEnd" data-format="HH:MM" placeholder="HH:MM" ng-model="session.from">
+				                </div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-6 col-lg-6">
+							<div class="form-group">
+								<label for="offeredBy">Offered By</label>
+								<input type="text" class="form-control" id="offeredBy" name="offeredBy" placeholder="Offered By" ng-model="session.offeredBy">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<div class="form-group">
+								<label for="address1">Address</label>
+								<input type="text" class="form-control" id="address1" name="address1" placeholder="Address One" ng-model="session.location.address1">
+							</div>
+						</div>
+						<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+							<div class="row text-center no-margin">
+								<label>Location</label>
+							</div>
+							<div class="row in-line no-margin">
+								<div class="form-group in-line col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
+									<input type="text" class="form-control" id="city" placeholder="City" ng-model="session.location.city">
+								</div>
+								<div class="form-group in-line col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
+									<input type="text" class="form-control" id="state" placeholder="State" ng-model="session.location.state">
+								</div>
+								<div class="form-group in-line col-xs-3 col-sm-3 col-md-3 col-lg-3 no-padding">
+									<input type="text" class="form-control" id="zip" placeholder="Zip" ng-model="session.location.zip">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="form-group">
+								<label for="description">Description</label>
+								<textarea class="form-control" id="description" name="description" placeholder="Description" ng-model="session.description"></textarea>
+							</div>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary" ng-click="save()">Submit</button>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
