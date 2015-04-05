@@ -17,8 +17,9 @@
                             <td>{{session.offeredBy}} </td>
                             <td>
                                 <div class="button-group">
-                                    <a ng-href="/#/sessions/{{session._id}}/edit" class="btn btn-default"> <i class="fa fa-pencil"></i> </a>
-                                    <a ng-href="/#/sessions/{{session._id}}/delete" class="btn btn-danger"> <i class="fa fa-trash-o"></i> </a>
+                                    <a ng-show="role == 'admin'" ng-href="/#/sessions/{{session._id}}/edit" class="btn btn-default"> <i class="fa fa-pencil"></i> </a>
+                                    <a ng-show="role == 'admin'" ng-href="/#/sessions/{{session._id}}/delete" class="btn btn-danger"> <i class="fa fa-trash-o"></i> </a>
+                                    <a ng-show="(role == 'user')||(role == 'public')" ng-click="register(session._id)" class="btn btn-default"> <i class="fa fa-sign-in"></i> </a>
                                 </div>
                             </td>
                         </tr>

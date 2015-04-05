@@ -230,3 +230,16 @@ app.run(function($rootScope, $state, loginModal) {
     }
   });
 });
+
+app.service('sessionService', function () {
+  var role = 'public';
+
+  return {
+      getRole: function () {
+          return role;
+      },
+      setRole: function(value) {
+          role = value;
+      }
+  };
+});
