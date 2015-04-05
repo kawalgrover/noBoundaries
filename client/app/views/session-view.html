@@ -1,19 +1,19 @@
-<div class="container-fluid main-container">
+<div class="container-fluid main-container-admin">
 	<div class="row text-center">
-		<div class="box">
-			<ng-include src="'views/sessions-nav.html'"></ng-include>
-
-			<h3>{{ session.title }} </h3>
-			<h5>{{ session.subTitle }} </h5>
-			<p> {{ session.description }} </p>
-			<p> {{ session.from }} </p>
-			<p> {{ session.to }} </p>
-			<p> {{ session.offeredBy }} </p>
-			<p> {{ session.location.address1 }} </p>
-			<p> {{ session.location.address2 }} </p>
-			<p> {{ session.location.city }} </p>
-			<p> {{ session.location.state }} </p>
-			<p> {{ session.location.zip }} </p>
+		<div class="box width2x-box box-admin">
+            <div id="content">
+				<h3>{{ session.title }} </h3>
+				<h5>{{ session.subTitle }} </h5>
+				<p> {{ session.description }} </p>
+				<p> {{ session.from }} </p>
+				<p> {{ session.to }} </p>
+				<p> {{ session.offeredBy }} </p>
+				<p> {{ session.location.address1 }} </p>
+				<p> {{ session.location.address2 }} </p>
+				<p> {{ session.location.city }} </p>
+				<p> {{ session.location.state }} </p>
+				<p> {{ session.location.zip }} </p>
+			</div>
 		</div>
 	</div>
 </div>

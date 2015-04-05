@@ -20,14 +20,14 @@ var app = angular
 
     $stateProvider
       .state('home', {
-        url: '/',
+        url: '',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         data: {
           requireLogin: false
         }
       })
-      .state('home.about', {
+      .state('about', {
         url: '/about',
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
@@ -48,39 +48,39 @@ var app = angular
         templateUrl: 'views/register.html',
         controller: 'RegisterCtrl',
         data: {
-          requireLogin: true
+          requireLogin: false
         }
       })
-      .state('register.create', {
-        url: 'create/register',
+      .state('registerCreate', {
+        url: '/create/register',
         templateUrl: 'views/registration-add.html',
         controller: 'RegistrationAddCtrl',
         data: {
-          requireLogin: true
+          requireLogin: false
         }
       })
-      .state('register.view', {
+      .state('registerView', {
         url: '/register/:id',
         templateUrl: 'views/registration-view.html',
         controller: 'RegistrationViewCtrl',
         data: {
-          requireLogin: true
+          requireLogin: false
         }
       })
-      .state('register.delete', {
+      .state('registerDelete', {
         url: '/register/:id/delete',
         templateUrl: 'views/registration-delete.html',
         controller: 'RegistrationDeleteCtrl',
         data: {
-          requireLogin: true
+          requireLogin: false
         }
       })
-      .state('register.edit', {
+      .state('registerEdit', {
         url: '/register/:id/edit',
         templateUrl: 'views/registration-edit.html',
         controller: 'RegistrationEditCtrl',
         data: {
-          requireLogin: true
+          requireLogin: false
         }
       })
       .state('sessions', {
@@ -91,7 +91,7 @@ var app = angular
           requireLogin: false
         }
       })
-      .state('/create/sessions', {
+      .state('sessionCreate', {
         url: '/create/sessions',
         templateUrl: 'views/session-add.html',
         controller: 'SessionsAddCtrl',
@@ -109,10 +109,10 @@ var app = angular
       })
       .state('sessionDelete', {
         url: '/sessions/:id/delete',
-        templateUrl: 'views/sessions-delete.html',
+        templateUrl: 'views/session-delete.html',
         controller: 'SessionsDeleteCtrl',
         data: {
-          requireLogin: true
+          requireLogin: false
         }
       })
       .state('sessionEdit', {

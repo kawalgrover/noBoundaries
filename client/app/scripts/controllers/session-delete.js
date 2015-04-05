@@ -8,15 +8,18 @@
  * Controller of the noBoundariesApp
  */
 app.controller('SessionsDeleteCtrl', function ($scope, $stateParams, Sessions, $location) {
-    $scope.session = Sessions.One($stateParams.id).get().$object;
 
-    $scope.deleteSession = function(){
-        $scope.session.remove().then(function() {
-            $location.path('/sessions');
-        });
-    };
+    Sessions.one($stateParams.id).get().then(function(session) {
+        $scope.session = session;
+        $scope.deleteSession = function(){
+            $scope.session.remove().then(function() {
+                $location.path('/sessions');
+            });
+        };
 
-    $scope.back = function() {
-        $location.path('/sessions/' + $stateParams.id);
-    };
+        $scope.back = function() {
+            $location.path('/sessions/' + $stateParams.id);
+        };
+    });
+
   });

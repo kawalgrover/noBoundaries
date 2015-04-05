@@ -1,13 +1,16 @@
-<div class="container-fluid main-container">
+<div class="container-fluid main-container-admin">
 	<div class="row text-center">
 		<div class="box">
-			<form role="form">
-				<p>Are you sure you wish to delete the session {{ session.title }}?</p>
-				<div class="form-group">
-					<input type="submit" class="btn btn-danger" ng-click="deleteSession()" value="Yes">
-					<button ng-click="back()" type="button" class="btn btn-default">No</button>
-				</div>
-			</form>
+            <div id="content">
+				<form role="form">
+					<h4>Are you sure you wish to delete the session {{session.title}}?</h4>
+					<br>
+					<div class="form-group">
+						<input type="submit" class="btn btn-danger" ng-click="deleteSession()" value="Yes">
+						<button ng-click="back()" type="button" class="btn btn-default">No</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
