@@ -131,13 +131,6 @@ var app = angular
           requireLogin: false
         }
       })
-      .state('authGoogle', {
-        resolve:{
-          promiseObj: function($http){
-            return $http({method: 'GET', url: '/auth/google'});
-          }
-        }
-      });
 
 
   })

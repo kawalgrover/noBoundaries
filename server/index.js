@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var _ = require('lodash');
-var passport = require('passport')
+var passport = require('passport');
 
 var UserHandler = require('./handlers/UserHandler');
 var AuthHandler = require('./handlers/AuthHandler');
@@ -46,39 +46,15 @@ db.once('open', function callback () {
     _.each(routes, function(controller, route){
         app.use(route, controller(app, route));
     });
-
+    /*
     var handlers = {
-    user: new UserHandler(),
-    auth: new AuthHandler()
+        user: new UserHandler(),
+        auth: new AuthHandler()
     };
-
-    var passportRoutes = require('./routes/passportroutes');
-    passportRoutes.setup(app,handlers);
+    */
+    require('./routes/auth').setup(app,db,passport);
 
 });
-
-passport.use(new google_strategy({
-    clientID: '738881702552-t7ta31oc68pf9ujljftteu4v7h6v71oh.apps.googleusercontent.com',
-    clientSecret: 'wst49LrsAT0SGSa35j4cAeIf',
-    callbackURL: 'http://localhost:3000/auth/google/callback'
-  },
-  function(accessToken, refreshToken, profile, done) {
-    db.findOne({email: profile._json.email},function(err,usr) {
-        usr.token = accessToken;
-        usr.save(function(err,usr,num) {
-            if(err) {
-                console.log('error saving token');
-            }
-        });
-        process.nextTick(function() {
-            return done(null,profile);
-        });
-    });
-  }
-));
-
-
-
 
 console.log('Listening on port 3000...');
 app.listen(3000);
