@@ -130,7 +130,15 @@ var app = angular
         data: {
           requireLogin: false
         }
+      })
+      .state('authGoogle', {
+        resolve:{
+          promiseObj: function($http){
+            return $http({method: 'GET', url: '/auth/google'});
+          }
+        }
       });
+
 
   })
   .factory('RegisterRestangular', function(Restangular) {
