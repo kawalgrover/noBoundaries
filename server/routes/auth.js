@@ -5,10 +5,10 @@ function setup(app,db,passport) {
     /* GOOGLE */
 
     passport.use(new GoogleStrategy({
-        clientID: '738881702552-t7ta31oc68pf9ujljftteu4v7h6v71oh.apps.googleusercontent.com',
-        clientSecret: 'wst49LrsAT0SGSa35j4cAeIf',
+        clientID: '420358873047-3rc8fibib01sgu43m8bt583f7ksbdujr.apps.googleusercontent.com',
+        clientSecret: '31RM_iTciu2ED3yyT7YduYtk',
         callbackURL: 'http://localhost:3000/auth/google/callback',
-        passReqToCallback : true 
+        passReqToCallback : true
     },
     function(req, token, refreshToken, profile, done) {
         process.nextTick(function() {
