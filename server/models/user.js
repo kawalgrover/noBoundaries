@@ -109,4 +109,12 @@ userSchema.methods.LogOut = function(){
     this.facebook.token = null;
 }
 
-module.exports = userSchema;
+var generateToken = function(lenght){
+    var token = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for( var i=0; i < lenght; i++ )
+        token += possible.charAt(Math.floor(Math.random() * possible.length));
+    return token;
+}
+
+module.exports = mongoose.model('users', userSchema);;

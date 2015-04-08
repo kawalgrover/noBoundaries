@@ -4,8 +4,8 @@ module.exports = function(app, route){
 
     // Setup the controller for REST.
     var rest = restful.model(
-         'user',
-         app.models.user
+         'users',
+         app.models.users
          ).methods(['get', 'put', 'post', 'delete']);
 
     //register this endpoint with the application.
