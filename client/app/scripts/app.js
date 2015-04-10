@@ -131,6 +131,20 @@ var app = angular
           requireLogin: false
         }
       })
+      .state('whatis', {
+        url: '/whatis',
+        templateUrl: 'views/whatis.html',
+        data: {
+          requireLogin: false
+        }
+      })
+      .state('faq', {
+        url: '/faq',
+        templateUrl: 'views/faq.html',
+        data: {
+          requireLogin: false
+        }
+      })
 
 
   })
